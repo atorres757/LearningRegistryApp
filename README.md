@@ -1,5 +1,10 @@
 Learning Registry App
 
+Requires 
+-ZendFramework-1.11.12
+
+Set your php.ini include path to the location of the Zend Framework library
+
 VHost Setup
 <VirtualHost *:80>
 	ServerName www.learningapp.dev
