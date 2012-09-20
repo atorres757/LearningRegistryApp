@@ -1,11 +1,10 @@
 templates = {
 	searchResultTile: [
 	    "<div>",
-	    "<p id='id'></p>",
-	    "<p id='category'></p>",
-	    "<p id='resources'></p>",
-	    "<p id='owner'></p>",
-	    "</div>",
-	    ""
+	    "<p class='fill' id='id'></p>",
+	    "<p class='fill' id='category'></p>",
+	    "<p class='fill' id='resources'></p>",
+	    "<p class='fill' id='owner'></p>",
+	    "</div>"
 	]
 }
