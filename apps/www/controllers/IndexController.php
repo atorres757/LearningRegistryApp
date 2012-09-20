@@ -47,5 +47,13 @@ class IndexController extends Zend_Controller_Action
 	public function viewPlanAction () {
 		
 	}
+	
+	public function viewResourceAction () {
+		
+	}
+	
+	public function editAccountAction () {
+		
+	}
 }
 
