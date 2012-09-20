@@ -14,20 +14,18 @@ class ResourceCommentRepo extends CouchRepo{
 		parent::save($resourcecomments, "resourcecomments");
 	}
 	
-	public function getResourceCommentsByIdAutocomplete($string){
-		//die($this->getViewQueryUri("planCommentsById", array($string, $string . '\u9999')));
-		//die($this->getViewQueryUri("planCommentsById", array($string, $string . '\u9999'), 10));
+	public function getResourceCommentsById($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("resourceCommentsById", array($string, $string . '\u9999'), 10)
+				$this->getDocumentUri($string)
 			);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
 		return $results;	
 	}
 	
-	public function getResourceCommentsByResourceIdAutocomplete($string){
+	public function getResourceCommentsByResourceId($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("resourceCommentsByResourceId", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("resourceCommentsByResourceId", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -35,9 +33,9 @@ class ResourceCommentRepo extends CouchRepo{
 	}
 	
 	
-	public function getResourceCommentsRatingAutocomplete($string){
+	public function getResourceCommentsRating($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("resourceCommentsByRating", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("resourceCommentsByRating", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
