@@ -1,6 +1,7 @@
 /* Custom Css */
 
 body {background:url('../img/background.gif');font-family:Helvetica;}
+ul {list-style:none;margin:0px;}
 
 .block {display:block;}
 .center {margin:0px auto;}
@@ -12,3 +13,6 @@ body {background:url('../img/background.gif');font-family:Helvetica;}
 
 .content {width:755px;min-width:325px;}
 
+.rnd-cell {border-radius:5px;-moz-border-radius:5px;width:45%;float:left;background-color:#fff;padding:5px;margin:10px;min-height:200px;box-shadow: 2px 2px 2px #000;}
+
+.science-icon {}
