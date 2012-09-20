@@ -14,11 +14,11 @@ class PlanRepo extends CouchRepo{
 		parent::save($plan, "plan");
 	}
 	
-	public function getPlansByIdAutocomplete($string){
+	public function getPlansById($string){
 		//die($this->getViewQueryUri("plansById", array($string, $string . '\u9999')));
 		//die($this->getViewQueryUri("plansById", array($string, $string . '\u9999'), 10));
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("plansById", array($string, $string . '\u9999'), 10)
+				$this->getDocumentUri($string)
 			);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -26,9 +26,9 @@ class PlanRepo extends CouchRepo{
 		
 	}
 	
-	public function getPlansByCategoryAutocomplete($string){
+	public function getPlansByCategory($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("plansByCategory", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("plansByCategory", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -37,16 +37,25 @@ class PlanRepo extends CouchRepo{
 	
 	public function getPlansByOwnerAutocomplete($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("plansByOwner", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("plansByOwnerAutocomplete", array($string, $string . '\u9999'), 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
 		return $results;
 	}
 	
-	public function getPlansByDateCreatedAutocomplete($string){
+	public function getPlansByOwner($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("plansByDateCreated", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("plansByOwner", $string, 10)
+		);
+		$response = $this->httpClient->request(\Zend_http_Client::GET);
+		$results = $this->map($response->getBody());
+		return $results;
+	}
+	
+	public function getPlansByDateCreated($string){
+		$this->httpClient->setUri(
+				$this->getViewQueryUri("plansByDateCreated", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());

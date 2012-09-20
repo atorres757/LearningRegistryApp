@@ -14,20 +14,20 @@ class PlanCommentRepo extends CouchRepo{
 		parent::save($plancomments, "plancomments");
 	}
 	
-	public function getPlanCommentsByIdAutocomplete($string){
+	public function getPlanCommentsById($string){
 		//die($this->getViewQueryUri("planCommentsById", array($string, $string . '\u9999')));
 		//die($this->getViewQueryUri("planCommentsById", array($string, $string . '\u9999'), 10));
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("planCommentsById", array($string, $string . '\u9999'), 10)
+				$this->getDocumentUri($string)
 			);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
 		return $results;	
 	}
 	
-	public function getPlanCommentsByPlanIdAutocomplete($string){
+	public function getPlanCommentsByPlanId($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("planCommentsByPlanId", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("planCommentsByPlanId", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -35,9 +35,9 @@ class PlanCommentRepo extends CouchRepo{
 	}
 	
 	
-	public function getPlanCommentsRatingAutocomplete($string){
+	public function getPlanCommentsByRating($string){
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("planCommentsByRating", array($string, $string . '\u9999'), 10)
+				$this->getViewQueryUri("planCommentsByRating", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());

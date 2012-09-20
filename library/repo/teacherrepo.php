@@ -14,11 +14,11 @@ class TeacherRepo extends CouchRepo{
 		parent::save($teacher, "teacher");
 	}
 	
-	public function getTeachersByIdAutocomplete($string){
+	public function getTeachersById($string){
 		//die($this->getViewQueryUri("teachersById", array($string, $string . '\u9999')));
 		//die($this->getViewQueryUri("teachersById", array($string, $string . '\u9999'), 10));
 		$this->httpClient->setUri(
-				$this->getViewQueryUri("teachersById", array($string, $string . '\u9999'), 10)
+				$this->getDocumentUri($string)
 			);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -35,9 +35,27 @@ class TeacherRepo extends CouchRepo{
 		return $results;
 	}
 	
+	public function getTeachersByLastName($string){
+		$this->httpClient->setUri(
+				$this->getViewQueryUri("teachersByLastName", $string, 10)
+		);
+		$response = $this->httpClient->request(\Zend_http_Client::GET);
+		$results = $this->map($response->getBody());
+		return $results;
+	}
+	
 	public function getTeachersByFirstNameAutocomplete($string){
 		$this->httpClient->setUri(
 				$this->getViewQueryUri("teachersByFirstName", array($string, $string . '\u9999'), 10)
+		);
+		$response = $this->httpClient->request(\Zend_http_Client::GET);
+		$results = $this->map($response->getBody());
+		return $results;
+	}
+	
+	public function getTeachersByFirstName($string){
+		$this->httpClient->setUri(
+				$this->getViewQueryUri("teachersByFirstName", $string, 10)
 		);
 		$response = $this->httpClient->request(\Zend_http_Client::GET);
 		$results = $this->map($response->getBody());
@@ -53,6 +71,16 @@ class TeacherRepo extends CouchRepo{
 		return $results;
 	}
 	
+	
+	public function getTeachersBySchool($string){
+		$this->httpClient->setUri(
+				$this->getViewQueryUri("teachersBySchool", $string, 10)
+		);
+		$response = $this->httpClient->request(\Zend_http_Client::GET);
+		$results = $this->map($response->getBody());
+		return $results;
+	}
+	
 	public function getTeachersByEmailAutocomplete($string){
 		$this->httpClient->setUri(
 				$this->getViewQueryUri("teachersByEmail", array($string, $string . '\u9999'), 10)
@@ -61,6 +89,17 @@ class TeacherRepo extends CouchRepo{
 		$results = $this->map($response->getBody());
 		return $results;
 	}
+	
+	
+	public function getTeachersByEmail($string){
+		$this->httpClient->setUri(
+				$this->getViewQueryUri("teachersByEmail", $string, 10)
+		);
+		$response = $this->httpClient->request(\Zend_http_Client::GET);
+		$results = $this->map($response->getBody());
+		return $results;
+	}
+	
 	
 	public function map($json){
 		$response = json_decode($json);
