@@ -1,0 +1,14 @@
+/* Custom Css */
+
+body {background:url('../img/background.gif');font-family:Helvetica;}
+
+.block {display:block;}
+.center {margin:0px auto;}
+.flt-right {float:right;}
+
+.banner {height:253px;width:100%;background:url('../img/chalkboard-bg.gif') top center;}
+.banner-logo {width:325px;height:158px;}
+.banner nav {width:460px;}
+
+.content {width:755px;min-width:325px;}
+
