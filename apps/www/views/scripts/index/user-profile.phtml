@@ -4,17 +4,30 @@
     <title>Reach It! The Teaching Planner</title>
     <!-- Bootstrap -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <h1><a href="/index/edit-account">Allen Torres</a></h1>
-    <h2>My Plans</h2>
-    <a href="/index/build-plan">Build a Lesson Plan</a>
-    <a href="/index/search-plans">Search Lesson Plans</a>
-    <ul>
-    	<li>Plan One</li>
-    	<li>Plan Two</li>
-    	<li>Plan Three</li>
-    </ul>
+  	<header class="banner">
+  		<img class="banner-logo center block" src="/bootstrap/img/logo.png" />
+  		<nav class="center block">
+  			<a href="/index/user-profile"><img src="/bootstrap/img/home.png" /></a>
+  			<a href="/index/user-profile"><img src="/bootstrap/img/build.png" /></a>
+  			<a href="/index/user-profile"><img src="/bootstrap/img/search.png" /></a>
+  		</nav>
+  	</header>
+  	<section class="content center">
+  		<span class="flt-right"><a href="/index/edit-account">Allen Torres</a></span>
+  	</section>
+  	<section class="content center">
+	    <h2>My Lesson Plans</h2>
+	    <a href="/index/build-plan">Build a Lesson Plan</a>
+	    <a href="/index/search-plans">Search Lesson Plans</a>
+	    <ul>
+	    	<li class="rnd-cell">Plan One</li>
+	    	<li>Plan Two</li>
+	    	<li>Plan Three</li>
+	    </ul>
+    </section>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
