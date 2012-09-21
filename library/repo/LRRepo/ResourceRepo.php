@@ -17,12 +17,12 @@ class ResourceRepo extends LRRepo{
 			// var_dump($someResults); die();
 			foreach($someResults as $result){
 				$resourceArray[] = $result;
+				if(count($resourceArray) == $count) break;
 			}
 		}
 		
 		$toReturn = array();
 		foreach($resourceArray as $key => $resource){
-			if($key >= $count) break;
 			$lightRes = new \stdClass();
 			$lightRes->_id = $resource->doc_ID;
 			$lightRes->keys = $resource->resource_data_description->keys;

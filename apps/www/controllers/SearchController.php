@@ -13,10 +13,11 @@ class SearchController extends Zend_Controller_Action
     {
         $query = $this->getRequest()->getParam("query");
         $count = $this->getRequest()->getParam("count");
+        $toomit = $this->getRequest()->getParam("toomit");
         $count = (empty($count)) ? 10 : $count;
         $resourcesRepo = new LRRepo\ResourceRepo("https://node01.public.learningregistry.net");
         
-        echo json_encode($resourcesRepo->getReducedArrayOfResources($query, $count));
+        echo json_encode($resourcesRepo->getReducedArrayOfResources($query, $count, $toomit));
 
     }
     
