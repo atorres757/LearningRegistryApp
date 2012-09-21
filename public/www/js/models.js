@@ -2,9 +2,9 @@ models = {
 	Plan : function (){
 		this.type = "Lesson",
 		this.id = 0,
-		this.category = "Other",
+		this.category = "Math",
 		this.resources = new Array(),
-		this.owner = "",
+		this.owner = "Vamsi Vidala",
 		this.datecreated = new Date()
 	},
 	
