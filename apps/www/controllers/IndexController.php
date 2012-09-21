@@ -5,7 +5,7 @@ class IndexController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+        $this->view->navActive = "";
     }
 
     public function indexAction()
@@ -33,15 +33,15 @@ class IndexController extends Zend_Controller_Action
 	}
 	
 	public function userProfileAction () {
-		
+		$this->view->navActive = "home";
 	}
 	
 	public function buildPlanAction () {	
-		
+		$this->view->navActive = "build";
 	}
 	
 	public function searchPlansAction () {
-		
+		$this->view->navActive = "search";
 	}
 	
 	public function viewPlanAction () {
