@@ -10,7 +10,17 @@ store = {
 			}
 		});
 	},
-	query: function(qryObj) {
-		return false;
+	query: function(qry, callback) {
+		var searchEndpoint="/search/index/query/"+qry;
+		$.ajax({
+			url: searchEndpoint,
+			method: 'get',
+			success: function(data){
+				callback( data );
+			},
+			failure: function(date){
+				console.log(data);
+			}
+		});
 	}
 }

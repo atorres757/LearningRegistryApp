@@ -12,7 +12,9 @@ models = {
 	Resource : Backbone.Model.extend({
 		defaults: {
 			id: 0,
-			document: "http://documentnotfound.com"
+			document: "http://documentnotfound.com",
+			description: "",
+			title: ""
 		}
 	}),
 	

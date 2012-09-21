@@ -1,5 +1,5 @@
 renderer = function(obj, tmpl) {
-	var el = tmpl.join("");
+	/*var el = tmpl.join("");
 	$(el).find(".fill").each {
 		function(){
 			var value = obj.get($(this).attr("id"));
@@ -9,4 +9,5 @@ renderer = function(obj, tmpl) {
 			}
 		}
 	}
+	*/
 }
