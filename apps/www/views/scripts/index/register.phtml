@@ -4,11 +4,13 @@
     <title>Reach It! The Teaching Planner</title>
     <!-- Bootstrap -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Register</h1>
-    <a href="/index/login">Back to login</a>
-    <section>
+  	<?php echo $this->render('/elements/header.phtml'); ?>
+    <section class="content center">
+    	<h1>Register</h1>
+    	<a href="/index/login">Back to login</a>
 	    <form>
 	    	<label>Username</label>
 	    	<input type="text" name="username" value="" />
@@ -19,6 +21,7 @@
 	    	<input type="submit" class="btn btn-block" value="Register" />
 	    </form>
     </section>
+    <footer></footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="/boostrap/js/bootstrap.min.js"></script>
   </body>

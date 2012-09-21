@@ -72,7 +72,9 @@ class PlanRepo extends CouchRepo{
 			$plan->Category = $row->value->Category;
 			$plan->DateCreated = $row->value->DateCreated;
 			$plan->Owner = $row->value->Owner;
-			$plan->Resources = $row->value->Resources;
+			foreach ($row->value->Resources as $aResource) {
+				$plan->Resources[] = $aResource;
+			}
 			$results[] = $plan;			
 		}
 		return $results;
