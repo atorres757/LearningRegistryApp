@@ -9,10 +9,13 @@ templates = {
 	],
 	resourceResult: [
 	    "<li>",
-	    "<a class='fill link' href=''>",
+	    "<a class='fill link' href='htt://notfound.com'>",
 	    "<span class='fill title'></span>",
 	    "<span class='fill description'></span>",
 	    "</a>",
 	    "</li>"
+	],
+	moreResultsButton: [
+	    "<a class='btn btn-block' href='#' id='moreResults'>More Results</a>"
 	]
 }
