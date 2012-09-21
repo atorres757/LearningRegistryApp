@@ -7,29 +7,40 @@
     <link href="/bootstrap/css/custom.css" rel="stylesheet">
   </head>
   <body>
-  	<header class="banner">
-  		<img class="banner-logo center block" src="/bootstrap/img/logo.png" />
-  		<nav class="center block">
-  			<a href="/index/user-profile"><img src="/bootstrap/img/home.png" /></a>
-  			<a href="/index/user-profile"><img src="/bootstrap/img/build.png" /></a>
-  			<a href="/index/user-profile"><img src="/bootstrap/img/search.png" /></a>
-  		</nav>
-  	</header>
+  	<?php echo $this->render('/elements/header.phtml'); ?>
   	<section class="content center">
   		<span class="flt-right"><a href="/index/edit-account">Allen Torres</a></span>
   	</section>
   	<section class="content center">
 	    <h2>My Lesson Plans</h2>
-	    <a href="/index/build-plan">Build a Lesson Plan</a>
-	    <a href="/index/search-plans">Search Lesson Plans</a>
-	    <ul>
-	    	<li class="rnd-cell science-icon">
-	    		<h3>Science Now</h3>
+	    <ul class="clearfix">
+	    	<li class="rnd-cell">
+	    		<div class="icon science-icon"></div>
+	    		<h3 class="nomarg">Science Now</h3>
+	    		<p><span><i>Mrs. Teacher</i></span><span class="flt-right"><i>9/14/2012</i></span></p>
+	    		<p class="clearboth mbTop15">Description of science now.</p>
 	    	</li>
-	    	<li class="rnd-cell">Plan Two</li>
-	    	<li class="rnd-cell">Plan Three</li>
+	    	<li class="rnd-cell">
+	    		<div class="icon math-icon"></div>
+	    		<h3 class="nomarg">Math Now</h3>
+	    		<p><span><i>Mrs. Teacher</i></span><span class="flt-right"><i>9/14/2012</i></span></p>
+	    		<p class="clearboth mbTop15">Description of math now.</p>
+	    	</li>
+	    	<li class="rnd-cell">
+	    		<div class="icon eng-icon"></div>
+	    		<h3 class="nomarg">English Now</h3>
+	    		<p><span><i>Mrs. Teacher</i></span><span class="flt-right"><i>9/14/2012</i></span></p>
+	    		<p class="clearboth mbTop15">Description of english now.</p>
+	    	</li>
+	    	<li class="rnd-cell">
+	    		<div class="icon ss-icon"></div>
+	    		<h3 class="nomarg">Social Studies Now</h3>
+	    		<p><span><i>Mrs. Teacher</i></span><span class="flt-right"><i>9/14/2012</i></span></p>
+	    		<p class="clearboth mbTop15">Description of social studies now.</p>
+	    	</li>
 	    </ul>
     </section>
+    <footer></footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="/boostrap/js/bootstrap.min.js"></script>
   </body>

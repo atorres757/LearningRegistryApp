@@ -2,17 +2,25 @@
 
 body {background:url('../img/background.gif');font-family:Helvetica;}
 ul {list-style:none;margin:0px;}
+footer {background:url('../img/footer.png') top center;width:100%;height:99px;}
 
 .block {display:block;}
 .center {margin:0px auto;}
 .flt-right {float:right;}
+.nomarg {margin:0px;}
+.mbTop15 {margin-top:15px;}
+.clearboth {clear:both;}
 
 .banner {height:253px;width:100%;background:url('../img/chalkboard-bg.gif') top center;}
 .banner-logo {width:325px;height:158px;}
 .banner nav {width:460px;}
 
-.content {width:755px;min-width:325px;}
+.content {max-width:755px;min-width:325px;}
 
-.rnd-cell {border-radius:5px;-moz-border-radius:5px;width:45%;float:left;background-color:#fff;padding:5px;margin:10px;min-height:200px;box-shadow: 2px 2px 2px #000;}
+.rnd-cell {border-radius:5px;-moz-border-radius:5px;width:325px;float:left;background-color:#fff;padding:5px;margin:10px;min-height:200px;box-shadow: 2px 2px 2px #000;}
 
-.science-icon {}
+.icon {width:77px;height:67px;float:left;margin:2px;}
+.science-icon {background:url('../img/icons-science.gif') top left;}
+.math-icon {background:url('../img/icons-math.gif') top left;}
+.eng-icon {background:url('../img/icons-eng.gif') top left;}
+.ss-icon {background:url('../img/icons-ss.gif') top left;}

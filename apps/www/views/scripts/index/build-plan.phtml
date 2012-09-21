@@ -4,11 +4,13 @@
     <title>Build Lesson Plan</title>
     <!-- Bootstrap -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Build Lesson Plan</h1>
-    <a href="/index/user-profile">Back to Profile</a>
-    <section>
+ 	<?php echo $this->render('/elements/header.phtml'); ?>
+    <section class="content center">
+    	<h1>Build Lesson Plan</h1>
+    	<a href="/index/user-profile">Back to Profile</a>
     	<form>
     		<label>Search</label>
     		<input type="text" name="search_text" />
@@ -20,7 +22,7 @@
     		<li>Result 3 <a href="#">Add to Plan</a></li>
     	</ul>
     </section>
-    <section>
+    <section class="content center">
 	    <form>
 	    	<label>Lesson Plan Name</label>
 	    	<input type="text" name="plan_name" value="" />
@@ -35,6 +37,7 @@
 	    	<input type="submit" class="btn btn-block" value="Save" />
 	    </form>
     </section>
+    <footer></footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="/boostrap/js/bootstrap.min.js"></script>
   </body>
