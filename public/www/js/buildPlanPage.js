@@ -18,14 +18,13 @@ Search = {
 			curr.resourceIds.push(val._id);
 			curr.appendItem(val);
 		});
-		curr.addMoreResultsButton();
+
+		curr.showMoreResultsButton();
 	},
-	addMoreResultsButton: function(){
-		$("#results").append($(templates.moreResultsButton.join("")));
-		$("#moreResults").bind('click', Search.loadMoreResults);
+	showMoreResultsButton: function(){
+		$("#moreResults").show();
 	},
 	loadMoreResults: function() {
-		$("#moreResults").remove();
 		var qry = $('#searchQuery').val();
 		qry += "/count/10/toomit/"+Search.resourceIds.join(",");
 		store.query(qry, Search.renderResults)
@@ -41,8 +40,10 @@ Search = {
 }
 
 $(function () {
+	$("#moreResults").bind('click', Search.loadMoreResults);
 	$('#searchQuery').bind('keypress', function(e){
 		if (e.keyCode == 13){
+			$("#results").empty();
 			store.query($(this).val(), Search.renderResults)
 			return false;
 		}
