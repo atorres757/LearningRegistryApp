@@ -8,7 +8,8 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 .center {margin:0px auto;}
 .flt-right {float:right;}
 .nomarg {margin:0px;}
-.mbTop15 {margin-top:15px;}
+.mt15 {margin-top:15px;}
+.mb50 {margin-bottom:50px;}
 .clearboth {clear:both;}
 .italic {font-style:italic;}
 
@@ -25,7 +26,7 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 	min-height:200px;
 	color: #000;
     padding: 10px;
-    background: #fff;
+    background: url('../img/bg-whitebox.gif') top left #fff;
     border: 2px solid #ccc;
     border-right: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
@@ -36,19 +37,14 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 	position:relative;
 }
 
-@media (max-width:764px) {
-	.banner {height:98%;}
-	.banner nav {margin-top:10px;width:98%;}
-	.banner nav a img {width:32%;}
-	.rnd-cell {width:95%;margin-left:0px;margin-right:0px;}
-}
-
 .icon {width:77px;height:67px;float:left;margin-right:10px;}
 .science-icon {background:url('../img/icons-science.gif') top left;}
 .math-icon {background:url('../img/icons-math.gif') top left;}
 .eng-icon {background:url('../img/icons-eng.gif') top left;}
 .ss-icon {background:url('../img/icons-ss.gif') top left;}
 .edit-icon {background:url('../img/edit.png') top left;width:18px;height:18px;}
+.checkmark {background:url('../img/checkmark.png') top left no-repeat;display:inline-block;}
+.down-arrow {background:url('../img/arrow.png') -1px 4px no-repeat;padding-left:12px;}
 
 .grade {width:62px;height:50px;position:absolute;top:75%;left:80%;}
 .grade-a-plus {background:url('../img/grading-14.gif') top left;}
@@ -56,3 +52,10 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 .grade-b-minus {background:url('../img/grading.gif') top left;}
 .grade-c {background:url('../img/grading-24.gif') top left;}
 
+@media (max-width:764px) {
+	.banner {height:98%;}
+	.banner nav {margin-top:10px;width:98%;}
+	.banner nav a img {width:30%;}
+	.checkmark {display:inline;background-position:-1px -6px;}
+	.rnd-cell {width:95%;margin-left:0px;margin-right:0px;}
+}
