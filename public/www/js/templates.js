@@ -9,7 +9,7 @@ templates = {
 	],
 	resourceResult: [
 	    "<li>",
-	    "<a class='fill link' href='htt://notfound.com'>",
+	    "<a class='fill link' target='_blank' href='htt://notfound.com'>",
 	    "<span class='fill title'></span>",
 	    "<span class='fill description'></span>",
 	    "</a>",
