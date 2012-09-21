@@ -14,6 +14,7 @@ class ResourceRepo extends LRRepo{
 			$someResults = $this->reduceByToOmit($someResults, $toOmit);
 			//var_dump($someResults); die();
 			$someResults = $this->reduceByTags($someResults, $query);
+			// var_dump($someResults); die();
 			foreach($someResults as $result){
 				$toReturn[] = $result;
 			}
@@ -47,7 +48,7 @@ class ResourceRepo extends LRRepo{
 		$tags = explode(",", $tags);
 		foreach($resources as $key => $value){
 			foreach($tags as $tag){
-				if(array_search($tag, $value->resource_data_description->keys) === false){
+				if(array_search(strtolower($tag), array_map('strtolower', $value->resource_data_description->keys)) === false){
 					unset($resources[$key]);
 					continue;
 				}

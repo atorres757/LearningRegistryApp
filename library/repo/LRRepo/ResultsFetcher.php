@@ -20,7 +20,7 @@ class ResultsFetcher{
 	private function getViewQueryUri(){
 		$path = $this->server;
 		$path .= '/slice?any_tags=';
-		$path .= $this->query;
+		$path .= urlencode($this->query);
 		if($this->resumptionToken !== null){
 			$path .= '&resumption_token=' . $this->resumptionToken;
 		}
