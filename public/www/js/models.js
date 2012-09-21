@@ -1,47 +1,42 @@
 models = {
-	Lesson : Backbone.Model.extend({
-		defaults: {
-			id: 0,
-			category: "Other",
-			resources: new Array(),
-			owner: "",
-			datecreated: new Date()
-		}
-	}),
+	Plan : function (){
+		this.type = "Lesson",
+		this.id = 0,
+		this.category = "Other",
+		this.resources = new Array(),
+		this.owner = "",
+		this.datecreated = new Date()
+	},
 	
-	Resource : Backbone.Model.extend({
-		defaults: {
-			id: 0,
-			document: "http://documentnotfound.com",
-			description: "",
-			title: ""
-		}
-	}),
+	Resource : function (){
+		this.type = "Resource",
+		this.id = 0,
+		this.document = "http://documentnotfound.com",
+		this.description = "",
+		this.title = ""
+	},
 	
-	Teacher : Backbone.Model.extend({
-		defaults: {
-			id: 0,
-			firstName: "",
-			lastName: "",
-			eMail: "",
-			school: "",
-			location: ""
-		}
-	}),
+	Teacher : function (){
+		this.type = "Teacher",
+		this.id = 0,
+		this.firstName = "",
+		this.lastName = "",
+		this.eMail = "",
+		this.school = "",
+		this.location = ""
+	},
 	
-	ResourceComment : Backbone.Model.extend({
-		defaults: {
-			resourceid: 0,
-			content: "",
-			ratings: new Array()
-		}
-	}),
+	ResourceComment : function (){
+		this.type = "ResourceComment",
+		this.resourceid = 0,
+		this.content = "",
+		this.ratings = new Array()
+	},
 	
-	LessonComment : Backbone.Model.extend({
-		defaults: {
-			lessonId: 0,
-			content: "",
-			ratings: new Array()
-		}
-	})
+	PlanComment : function (){
+		this.type = "PlanComment"
+		this.lessonId = 0,
+		this.content = "",
+		this.ratings = new Array()
+	}
 }

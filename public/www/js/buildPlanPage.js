@@ -1,9 +1,9 @@
 var Search = {
 	appendItem: function(resource){
 		var item = $(templates.resourceResult.join(""));
-		item.find(".link").href(resource.get("document"));
-		item.find(".description").text(resource.get("description"));
-		item.find(".title").text(resource.get("title"));
+		item.find(".link").href(resource.document);
+		item.find(".description").text(resource.description);
+		item.find(".title").text(resource.title);
 		
 		$(this.el).append(item);
 	},
@@ -16,7 +16,6 @@ var Search = {
 }
 
 $(function () {
-	console.log("YEah");
 	$('#searchQuery').bind('keypress', function(e){
 		if (e.keyCode == 13){
 			store.query($(this).val(), Search.renderResults)
