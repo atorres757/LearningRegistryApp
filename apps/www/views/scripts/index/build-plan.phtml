@@ -9,19 +9,16 @@
   <body>
  	<?php echo $this->render('/elements/header.phtml'); ?>
     <section class="content center">
-    	<h1>Build Lesson Plan</h1>
-    	<a href="/index/user-profile">Back to Profile</a>
-    		
-    	
-    	
+    	<img src="/bootstrap/img/buildplan.png" />
+    	<a class="block" href="/index/user-profile">Back to Profile</a>	
     </section>
     <section class="content center">
 	    	<label>Lesson Plan Name</label>
 	    	<input type="text" name="plan_name" value="" />
 	    	<label>Description</label>
-	    	<textarea name="description"></textarea>
+	    	<textarea class="fullwidth h100" name="description"></textarea>
 	    	<label>Resources</label>
-    		<label>Search</label>
+    		<label>Search the Learning Registry</label>
 	    	<input id="searchQuery" type="text" name="search_text" />
 	    	<h3>Results</h3>
 	    	<ul id="results">

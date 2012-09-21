@@ -12,6 +12,8 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 .mb50 {margin-bottom:50px;}
 .clearboth {clear:both;}
 .italic {font-style:italic;}
+.fullwidth {width:100%;}
+.h100 {height:100px;}
 
 .banner {height:253px;width:100%;background:url('../img/chalkboard-bg.gif') top center;}
 .banner-logo {width:325px;height:158px;}
