@@ -54,7 +54,7 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 .grade-b-minus {background:url('../img/grading.gif') top left;}
 .grade-c {background:url('../img/grading-24.gif') top left;}
 
-#results li {
+.result-item {
 	background: url('../img/bg-whitebox.gif') top left #fff;
     border: 2px solid #ccc;
     border-right: 2px solid #ccc;
