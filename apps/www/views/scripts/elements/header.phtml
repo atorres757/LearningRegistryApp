@@ -1,8 +1,8 @@
 	<header class="banner">
   		<img class="banner-logo center block" src="/bootstrap/img/logo.png" />
   		<nav class="center block">
-  			<a class="<?=($this->navActive == "home") ? "checkmark" : ""?>" href="/index/user-profile"><img src="/bootstrap/img/home.png" /></a>
-  			<a class="<?=($this->navActive == "build") ? "checkmark" : ""?>" href="/index/build-plan"><img src="/bootstrap/img/build.png" /></a>
-  			<a class="<?=($this->navActive == "search") ? "checkmark" : ""?>" href="/index/search-plans"><img src="/bootstrap/img/search.png" /></a>
+  			<a class="<?=($this->navActive == "home") ? "checkmark" : ""?>" href="/index/user-profile"><img src="/bootstrap/img/<?=($this->navActive == "home") ? "home-ro.png" : "home.png"?>" /></a>
+  			<a class="<?=($this->navActive == "build") ? "checkmark" : ""?>" href="/index/build-plan"><img src="/bootstrap/img/<?=($this->navActive == "build") ? "build-ro.png" : "build.png"?>" /></a>
+  			<a class="<?=($this->navActive == "search") ? "checkmark" : ""?>" href="/index/search-plans"><img src="/bootstrap/img/<?=($this->navActive == "search") ? "search-ro.png" : "search.png"?>" /></a>
   		</nav>
   	</header>
