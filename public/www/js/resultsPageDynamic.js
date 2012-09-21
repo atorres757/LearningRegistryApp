@@ -1,4 +1,4 @@
-﻿var searchResults = function () {
+var searchResults = function () {
     var Property = Backbone.Model.extend({
         defaults: {
             id: 0,

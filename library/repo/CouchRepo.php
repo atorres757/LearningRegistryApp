@@ -42,8 +42,7 @@ class CouchRepo{
 		return $path . '?' . $query;
 	}
 	
-	public function save($object, $type = null){
-		if ($type != null) $object->type = $type;
+	public function save($object){
 		$id = $object->_id;
 		unset($object->_id);
 		$json = json_encode($object);
@@ -51,7 +50,7 @@ class CouchRepo{
 		$this->httpClient->setUri($this->getDocumentUri($id));
 	
 		$return = $this->httpClient->request(\Zend_Http_Client::PUT);
-		$this->httpClient->setMethod(\Zend_Http_Client::GET);
+		$this->httpClient->setMethod(\Zend_Http_Client::GET); // Set back to GET
 		return $return;
 	}
 	

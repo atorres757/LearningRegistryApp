@@ -1,5 +1,6 @@
 <?php
 
+
 class PlanController extends Zend_Controller_Action
 {
 
@@ -18,7 +19,6 @@ class PlanController extends Zend_Controller_Action
 		$planRepoVar = new repo\PlanRepo($this->_reachitRepoUri);
 		if ($this->getRequest()->isPost()){
 			$data = $this->getRequest()->getPost();
-			$plan = $planRepoVar->map($data);
 			$planRepoVar->save($plan);
 		}	
 	}
