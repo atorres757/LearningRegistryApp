@@ -15,7 +15,4 @@ templates = {
 	    "</a>",
 	    "</li>"
 	],
-	moreResultsButton: [
-	    "<a class='btn btn-block' href='#' id='moreResults'>More Results</a>"
-	]
 }
