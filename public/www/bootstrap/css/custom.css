@@ -8,7 +8,8 @@ footer {background:url('../img/footer.png') top center no-repeat #000;width:100%
 .center {margin:0px auto;}
 .flt-right {float:right;}
 .nomarg {margin:0px;}
-.mbTop15 {margin-top:15px;}
+.mt15 {margin-top:15px;}
+.mb50 {margin-bottom:50px;}
 .clearboth {clear:both;}
 .italic {font-style:italic;}
 
