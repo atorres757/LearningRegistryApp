@@ -17,7 +17,18 @@ class ResourceRepo extends LRRepo{
 			foreach($someResults as $result){
 				$toReturn[] = $result;
 			}
-			//die();
+		}
+		
+		foreach($toReturn as $resource){
+			if(gettype($resource->resource_data_description->resource_data) == "string"){
+				$data = $resource->resource_data_description->resource_data;
+				if(preg_match("/(<dc:title>)(.+?)(<\/dc:title>)/", $data, $title) !== false){
+					if(isset($title[2])) $resource->resource_data_description->title = $title[2];
+				}
+				if(preg_match("/(<dc:description>)(.+?)(<\/dc:description>)/", $data, $desc) !== false){
+					if(isset($desc[2])) $resource->resource_data_description->description = $desc[2];
+				}
+			}
 		}
 		return $toReturn;
 	}
